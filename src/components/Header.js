@@ -1,28 +1,38 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import '../css/header.css';
+import '../css/general.css';
 
 
 class Header extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-default">
+        <nav className="navbar">
           <div className="container-fluid">
 
             <div className="navbar-header">
               <button type="button" className="navbar-toggle collapsed"
-                  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false">
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand" href="#">Kent_Howard_dot_com</a>
+              <a href="/">
+                <img id='prison' src={require('../img/logo.png')} alt='we build prisons'/>
+              </a>
             </div>
+            <p></p>
 
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul className="nav navbar-nav navbar-right">
-                <li><a href="#">Blog<span className="sr-only">(current)</span></a></li>
-                <li><a href="#">CV</a></li>
-              </ul>
+              <span className="nav navbar-right">
+                <Link className='link' to='/blog'>Blog</Link>
+                <span>.....</span>
+                <Link className='link' to='/sound'>Sound</Link>
+                <span>.....</span>
+                <Link className='link' to='/paintings'>Paintings</Link>
+              </span>
             </div>
           </div>
         </nav>

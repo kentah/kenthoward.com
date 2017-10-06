@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
+import '../css/splash.css';
+
 
 class Splash extends Component {
   render() {
     return (
-      <h3>This is the main page. An image of some sort will go here, in the center.
-      Maybe a modular patch of some sort</h3>
+      <div>
+        <img id='scribble' src={require('../img/delicate1.png')} alt='scribbles here' />
+      </div>
     )
   }
 }
